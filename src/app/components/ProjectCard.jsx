@@ -53,20 +53,6 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         </div>
 
         <div className="flex items-center gap-2 mt-10">
-          {/* <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-          >
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Sign up
-          </CardItem> */}
           <Button variant="outline" size="icon" className="rounded-full" asChild>
             <a href="https://github.com/n1dll" target="_blank">
               <CodeBracketIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
@@ -83,6 +69,5 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
     </CardContainer>
   );
 };
-
 
 export default ProjectCard;

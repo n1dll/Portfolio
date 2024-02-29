@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import NavLink from "./NavLink";
+import React, { useState, useRef } from "react";
+// import NavLink from "./NavLink";
+import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import HeaderRig from "./HeaderRig";
@@ -9,15 +9,15 @@ import HeaderRig from "./HeaderRig";
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "about",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "contact",
   },
 ];
 
@@ -25,7 +25,7 @@ const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav id="nav" className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex container lg:py-4 lg:px-12 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -48,16 +48,23 @@ const Header = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <Link
+                  to={link.path}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className="cursor-pointer"
+                >{link.title}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <HeaderRig/>
+        <HeaderRig />
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
-    
+
   );
 };
 
