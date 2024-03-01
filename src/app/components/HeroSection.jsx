@@ -8,8 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 const HeroSection = () => {
   return (
-    <section className="my-20">
-      <div className="flex justify-center gap-20">
+    <section className="my-20" id="home">
+      <div className="flex flex-col md:flex-row justify-center gap-20">
         <div className="flex flex-col justify-center">
           <h1 className="mb-4 sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold">
             {`Hello, i'm`}
