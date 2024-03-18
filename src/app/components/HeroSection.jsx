@@ -47,7 +47,7 @@ const HeroSection = () => {
         </div>
 
         <Avatar className="bg-[rgb(158,158,158)] h-[300px] w-[300px]">
-          <AvatarImage src="/images/hero-image1-remove.jpg" className="object-top mx-5 pointer-events-none" />
+          <AvatarImage src="/images/hero-image.jpg" className="object-top mx-5 pointer-events-none" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>
