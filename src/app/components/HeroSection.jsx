@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { Link as ReactLink } from "react-scroll";
+
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
@@ -23,11 +23,16 @@ const HeroSection = () => {
 
           <div className="flex gap-2">
             <Button asChild>
-              <Link
-                href="/#contact"
+              <ReactLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                className="cursor-pointer"
               >
                 Hire Me
-              </Link>
+              </ReactLink>
             </Button>
 
             <Button asChild variant="outline">

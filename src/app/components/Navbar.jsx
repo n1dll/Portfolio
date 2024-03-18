@@ -1,7 +1,6 @@
 "use client"
 
 import { React, useState } from "react";
-// import AnimatedLink from "./AnimatedLink";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { menuVars, containerVars, mobileLinkVars } from '../navbarAnimationValues'
@@ -49,7 +48,7 @@ const Navbar = () => {
                   to={link.path}
                   spy={true}
                   smooth={true}
-                  offset={-80}
+                  offset={0}
                   duration={500}
                   className="cursor-pointer"
                 >

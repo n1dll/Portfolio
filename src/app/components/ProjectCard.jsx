@@ -26,15 +26,17 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           {description}
         </CardItem>
 
+
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
             src={imgUrl}
-            height="400"
-            width="400"
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="w-full rounded-xl group-hover/card:shadow-xl"
+            height={400}
+            width={400}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="w-full max-h-64 rounded-xl group-hover/card:shadow-xl object-contain object-top"
             alt="thumbnail"
           />
+
         </CardItem>
 
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
@@ -54,13 +56,14 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 
         <div className="flex items-center gap-2 mt-10">
           <Button variant="outline" size="icon" className="rounded-full" asChild>
-            <a href="https://github.com/n1dll" target="_blank">
+            <a href={gitUrl} target="_blank">
               <CodeBracketIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             </a>
           </Button>
 
           <Button variant="outline" size="icon" className="rounded-full" asChild>
-            <a href="https://github.com/n1dll" target="_blank">
+            <a href={previewUrl}
+              target="_blank">
               <EyeIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             </a>
           </Button>

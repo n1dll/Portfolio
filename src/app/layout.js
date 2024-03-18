@@ -2,7 +2,7 @@ import './globals.css'
 import { Overpass_Mono } from 'next/font/google'
 import { ThemeProvider } from "./components/ThemeProvider"
 
-const inter = Overpass_Mono({
+const overpassMono = Overpass_Mono({
   subsets: ['latin'],
   weight: '400',
 })
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={overpassMono.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

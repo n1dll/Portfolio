@@ -4,6 +4,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import TechStack from './components/TechStack'
 
 export default function Home() {
   return (
@@ -12,9 +13,11 @@ export default function Home() {
       <div className="container md:mt-12 mx-auto px-12 py-4">
         <HeroSection />
         <AboutSection />
+        <TechStack />
         <ProjectsSection />
         <EmailSection />
       </div>
+
       <Footer />
     </main>
   );
