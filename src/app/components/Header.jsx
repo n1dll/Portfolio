@@ -8,7 +8,7 @@ import { menuVars, containerVars } from '../navbarAnimationValues'
 
 const Header = () => {
   return (
-    <header className="sticky top-0 flex justify-between z-50 border-b border-border/40 bg-background">
+    <header>
       <Navbar />
     </header>
   )

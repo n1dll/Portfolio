@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 flex justify-between z-50 border-b border-border/40 bg-background">
+    <nav className="sticky top-0 flex justify-between z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex relative justify-between w-full">
         <MenuButton open={open} toggleMenu={toggleMenu} />
         <HeaderRig />
