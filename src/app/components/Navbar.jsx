@@ -3,7 +3,7 @@
 import { React, useState } from "react";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
-import { menuVars, containerVars, mobileLinkVars } from '../navbarAnimationValues'
+import { menuVars, containerVars } from '../navbarAnimationValues'
 import MenuButton from './MenuButton'
 import HeaderRig from "./HeaderRig";
 
@@ -34,7 +34,6 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 flex justify-between z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60">
-
 
       <div className="md:flex hidden items-center px-8 py-8 md:py-4 lg:py-4">
         <div className="menu md:block md:w-auto" id="navbar">

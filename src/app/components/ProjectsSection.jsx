@@ -38,11 +38,11 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "admin dashboard",
-    description: "next.js app",
-    image: "/images/projects/dashboard.png",
+    title: "next.js ui ux",
+    description: "design",
+    image: "/images/projects/nextjs-ui-ux.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/n1dll/nextadmin",
+    gitUrl: "https://github.com/n1dll/nextjs-14-ui-ux",
   },
   {
     id: 6,
