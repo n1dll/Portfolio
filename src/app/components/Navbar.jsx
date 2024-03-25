@@ -34,10 +34,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 flex justify-between z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex relative justify-between w-full">
-        <MenuButton open={open} toggleMenu={toggleMenu} />
-        <HeaderRig />
-      </div>
+
 
       <div className="md:flex hidden items-center px-8 py-8 md:py-4 lg:py-4">
         <div className="menu md:block md:w-auto" id="navbar">
@@ -94,6 +91,12 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+
+      <div className="flex relative justify-between w-full md:w-auto">
+        <MenuButton open={open} toggleMenu={toggleMenu} />
+        <HeaderRig />
+      </div>
     </nav>
   );
 };

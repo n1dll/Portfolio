@@ -58,8 +58,8 @@ function ParallaxText({ list, baseVelocity = 100 }) {
         {list.map((tech, index) => (
           <React.Fragment key={index}>
             <span className={clsx(`${plaster.className} block`, {
-              // 'text-primary-foreground': index % 4,
-              // 'text-ring': index % 2,
+              'text-green-500': index % 2,
+              // 'dark:text-red-500': index % 2,
             },)}>{tech}</span>
 
             <Star />
