@@ -10,7 +10,6 @@ const projectsData = [
     description: "cosmetic catalogue",
     image: "/images/projects/gb.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "https://globalbeauty.bg/",
   },
   {
@@ -19,7 +18,6 @@ const projectsData = [
     description: "pharmacy product",
     image: "/images/projects/vitaceptin.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "https://www.vitaceptin.bg/",
   },
   {
@@ -28,17 +26,31 @@ const projectsData = [
     description: "online showroom",
     image: "/images/projects/magellan.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "https://magellan.bg/",
   },
   {
     id: 4,
-    title: "E-bike app",
-    description: "mobile app",
+    title: "admin dashboard",
+    description: "next.js app",
+    image: "/images/projects/dashboard.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/n1dll/nextadmin",
+  },
+  {
+    id: 5,
+    title: "admin dashboard",
+    description: "next.js app",
+    image: "/images/projects/dashboard.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/n1dll/nextadmin",
+  },
+  {
+    id: 6,
+    title: "e-bike app",
+    description: "mobile app using expo",
     image: "/images/projects/mobile.jpg",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Ivanina-Nedelcheva/BicycleApp",
-    previewUrl: "/",
   },
 ];
 
@@ -55,9 +67,9 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section id="projects" className="my-20">
+    <section id="projects" className="py-20 mt-5">
       <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12">
-        My Projects
+        Projects
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag

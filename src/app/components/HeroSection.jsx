@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 const HeroSection = () => {
   return (
-    <section className="my-20" id="home">
+    <section className="py-20" id="home">
       <div className="flex flex-col md:flex-row justify-center gap-20">
         <div className="flex flex-col justify-center">
           <h1 className="mb-4 sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold">
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <Avatar className="bg-[rgb(158,158,158)] h-[300px] w-[300px]">
+        <Avatar className="bg-[rgb(158,158,158)] h-[260px] w-[260px]">
           <AvatarImage src="/images/hero-image.jpg" className="object-top mx-5 pointer-events-none" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>

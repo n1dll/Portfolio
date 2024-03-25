@@ -12,11 +12,11 @@ import {
 } from "framer-motion";
 import clsx from 'clsx';
 import { wrap } from "@motionone/utils";
-import { Rubik_Spray_Paint } from 'next/font/google'
+import { Plaster } from 'next/font/google'
 import { Star } from 'lucide-react';
 
 
-const rubik = Rubik_Spray_Paint({
+const plaster = Plaster({
   subsets: ['latin'],
   weight: '400',
 })
@@ -30,7 +30,7 @@ function ParallaxText({ list, baseVelocity = 100 }) {
     damping: 50,
     stiffness: 400
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 10], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false
   });
 
@@ -54,15 +54,15 @@ function ParallaxText({ list, baseVelocity = 100 }) {
 
   return (
     <div className="overflow-hidden tracking-[-2px] whitespace-nowrap flex flex-nowrap m-0;">
-      <motion.div className="font-semibold text-slate-700 uppercase text-5xl md:text-6xl flex items-center gap-2 whitespace-nowrap flex-nowrap;" style={{ x }}>
+      <motion.div className="font-semibold uppercase text-4xl items-center gap-2 md:text-5xl whitespace-nowrap flex flex-nowrap" style={{ x }}>
         {list.map((tech, index) => (
           <React.Fragment key={index}>
-            <span className={clsx(`${rubik.className} block`, {
+            <span className={clsx(`${plaster.className} block`, {
               // 'text-primary-foreground': index % 4,
               // 'text-ring': index % 2,
             },)}>{tech}</span>
 
-            <Star className="text-white" />
+            <Star />
           </React.Fragment>
         ))}
 

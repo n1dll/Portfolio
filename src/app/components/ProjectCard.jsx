@@ -39,7 +39,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 
         </CardItem>
 
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
+        {/* <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <Link
             href={gitUrl}
             className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
@@ -52,21 +52,23 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           >
             <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
           </Link>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-2 mt-10">
-          <Button variant="outline" size="icon" className="rounded-full" asChild>
+
+          {gitUrl && <Button variant="outline" size="icon" className="rounded-full" asChild>
             <a href={gitUrl} target="_blank">
               <CodeBracketIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             </a>
-          </Button>
+          </Button>}
 
-          <Button variant="outline" size="icon" className="rounded-full" asChild>
+
+          {previewUrl && <Button variant="outline" size="icon" className="rounded-full" asChild>
             <a href={previewUrl}
               target="_blank">
               <EyeIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             </a>
-          </Button>
+          </Button>}
         </div>
       </CardBody>
     </CardContainer>
