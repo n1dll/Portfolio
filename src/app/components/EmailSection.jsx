@@ -40,7 +40,7 @@ const EmailSection = () => {
 
   const handleEmailChange = (e) => {
     const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
-    setEmailValid(emailRegex.test(e.target.value)); // Check if email matches pattern
+    setEmailValid(emailRegex.test(e.target.value))
   };
 
   return (
@@ -69,7 +69,7 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
+          <p className="text-green-500 text-lg mt-[5px]">
             Email sent successfully!
           </p>
         ) : (
@@ -88,7 +88,7 @@ const EmailSection = () => {
                 required
                 className={`border-2 text-sm rounded-lg block w-full p-2.5 ${!emailValid ? 'border-red-500' : ''}`}
                 placeholder="example@mail.com"
-                onChange={handleEmailChange} // Call handleEmailChange on input change
+                onChange={handleEmailChange}
               />
             </div>
             <div className="mb-6">
@@ -125,7 +125,7 @@ const EmailSection = () => {
             <div className="flex gap-2">
               <Button
                 type="submit"
-                disabled={!emailValid} // Disable button if email is not valid
+                disabled={!emailValid}
               >
                 Send Message
               </Button>
