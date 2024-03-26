@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
@@ -7,9 +7,9 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { Github } from 'lucide-react';
 
-
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailValid, setEmailValid] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +36,11 @@ const EmailSection = () => {
       console.log("Message sent.");
       setEmailSubmitted(true);
     }
+  };
+
+  const handleEmailChange = (e) => {
+    const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+    setEmailValid(emailRegex.test(e.target.value)); // Check if email matches pattern
   };
 
   return (
@@ -81,8 +86,9 @@ const EmailSection = () => {
                 type="email"
                 id="email"
                 required
-                className="border-2 text-sm rounded-lg block w-full p-2.5"
+                className={`border-2 text-sm rounded-lg block w-full p-2.5 ${!emailValid ? 'border-red-500' : ''}`}
                 placeholder="example@mail.com"
+                onChange={handleEmailChange} // Call handleEmailChange on input change
               />
             </div>
             <div className="mb-6">
@@ -117,9 +123,9 @@ const EmailSection = () => {
             </div>
 
             <div className="flex gap-2">
-
               <Button
                 type="submit"
+                disabled={!emailValid} // Disable button if email is not valid
               >
                 Send Message
               </Button>
