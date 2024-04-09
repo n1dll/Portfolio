@@ -118,7 +118,7 @@ const EmailSection = () => {
                 name="message"
                 id="message"
                 className="border-2 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk ..."
+                placeholder="let's talk ..."
               />
             </div>
 
