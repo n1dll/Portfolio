@@ -18,7 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <Head>
-        <script id="CookieDeclaration" src="https://consent.cookiebot.com/e0ad604c-3f39-4ad9-9e8b-4a6f9c59d482/cd.js" type="text/javascript" async></script>      </Head>
+        <script
+          id="CookieDeclaration"
+          src="https://consent.cookiebot.com/e0ad604c-3f39-4ad9-9e8b-4a6f9c59d482/cd.js"
+          type="text/javascript"
+          async>
+        </script>
+      </Head>
 
       <body className={overpassMono.className}>
         <ThemeProvider
