@@ -22,7 +22,8 @@ export default function RootLayout({ children }) {
           id="CookieDeclaration"
           src="https://consent.cookiebot.com/e0ad604c-3f39-4ad9-9e8b-4a6f9c59d482/cd.js"
           type="text/javascript"
-          async>
+          defer
+        >
         </script>
       </Head>
 
